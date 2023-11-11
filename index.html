@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科学技術部作品発表 プロジェクトページ</title>
+</head>
+<body>
+    <h1>科学技術部作品発表</h1>
+    <div id="mokuji">
+        
+    </div>
+    <br>
+    <h3>
+        1年生
+    </h3>
+    <div id="abe"></div>
+    <div id="aoki"></div>
+    <div id="kobayasi"></div>
+    <div id="iida"></div>
+    <div id="nomura"></div>
+    <div id="satou"></div>
+    <div id="idogawa"></div>
+    <div id="shimazaki"></div>
+    <div id="sasaki"></div>
+    <div id="hashimoto"></div>
+    <h3>2年生</h3>
+    <div id="anndou"></div>
+    <div id="okita"></div>
+    <div id="simada"></div>
+    <div id="miyazaki"></div>
+    <div id="kenmoti"></div>
+    <div id="hayate"></div>
+
+    <script>
+        function datacreate(projectid,projectname){
+            let data=`<a href="https://scratch.mit.edu/projects/${projectid}">${projectname}<br><img src="https://uploads.scratch.mit.edu/get_image/project/${projectid}_288x216.png">`;
+            return data;
+        }
+        var project={};
+
+        project.abe=document.getElementById('abe');
+        project.aoki=document.getElementById('aoki');
+        project.kobayasi=document.getElementById('kobayasi');
+        project.iida=document.getElementById('iida');
+        project.nomura=document.getElementById('nomura');
+        project.satou=document.getElementById('satou');
+        project.idokawa=document.getElementById('idokawa');
+        project.shimazaki=document.getElementById('shimazaki');
+        project.sasaki=document.getElementById('sasaki');
+        project.hashimoto=document.getElementById('hashimoto');
+
+        project.anndou=document.getElementById('anndou');
+        project.okita=document.getElementById('okita');
+        project.simada=document.getElementById('simada');
+        project.miyazaki=document.getElementById('miyazaki');
+        project.kennmoti=document.getElementById('kennmoti');
+        project.hayate=document.getElementById('hayate');
+        
+        project.abe.innerHTML=datacreate();
+        project.nomura.innerHTML=datacreate();
+        project.satou.innerHTML=datacreate();
+        project.idokawa.innerHTML=datacreate();
+        project.shimazaki.innerHTML=datacreate();
+        project.sasaki.innerHTML=datacreate();
+
+        project.anndou.innerHTML=datacreate();
+        project.okita.innerHTML=datacreate();
+        project.simada.innerHTML=datacreate();
+        project.miyazaki.innerHTML=datacreate();
+        project.kennmoti.innerHTML=datacreate();
+        project.hayate.innerHTML=datacreate();
+        _
+    </script>
+</body>
+</html>

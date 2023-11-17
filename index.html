@@ -20,6 +20,7 @@
     <h3>
         1年生
     </h3>
+
     <div id="abe"></div>
     <div id="aoki"></div>
     <div id="kobayasi"></div>
@@ -40,7 +41,7 @@
 
     <script>
         function datacreate(projectid,projectname){
-            let data=`<a href="https://scratch.mit.edu/projects/${projectid}">${projectname}<br><img src="https://uploads.scratch.mit.edu/get_image/project/${projectid}_288x216.png">`;
+            let data=`<a href="https://scratch.mit.edu/projects/${projectid}"><p>${projectname}<br><img src="https://uploads.scratch.mit.edu/get_image/project/${projectid}_288x216.png"></p></a>`;
             return data;
         }
         var project={};

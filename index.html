@@ -46,39 +46,43 @@
         }
         var project={};
 
-        project.abe=document.getElementById('abe');
-        project.aoki=document.getElementById('aoki');
-        project.kobayasi=document.getElementById('kobayasi');
-        project.iida=document.getElementById('iida');
-        project.nomura=document.getElementById('nomura');
-        project.satou=document.getElementById('satou');
-        project.idokawa=document.getElementById('idokawa');
-        project.shimazaki=document.getElementById('shimazaki');
-        project.sasaki=document.getElementById('sasaki');
-        project.hashimoto=document.getElementById('hashimoto');
-
-        project.anndou=document.getElementById('anndou');
-        project.okita=document.getElementById('okita');
-        project.simada=document.getElementById('simada');
-        project.miyazaki=document.getElementById('miyazaki');
-        project.kennmoti=document.getElementById('kennmoti');
-        project.hayate=document.getElementById('hayate');
+        //var date=new Date();
+        //var jikan=date.getMinutes();
         
-        project.abe.innerHTML=datacreate();
-        project.aoki.innerHTML='<a href="/data-kagaku/haru/index.html"><p>キャット戦<br><img src="/data-kagaku/haru/IMG_0145.jpeg"></p></a>';
-        project.nomura.innerHTML=datacreate();
-        project.satou.innerHTML=datacreate();
-        project.idokawa.innerHTML=datacreate();
-        project.shimazaki.innerHTML=datacreate();
-        project.sasaki.innerHTML=datacreate();
+        if(document.cookie.indexOf('data')==0){
+            project.abe=document.getElementById('abe');
+            project.aoki=document.getElementById('aoki');
+            project.kobayasi=document.getElementById('kobayasi');
+            project.iida=document.getElementById('iida');
+            project.nomura=document.getElementById('nomura');
+            project.satou=document.getElementById('satou');
+            project.idokawa=document.getElementById('idokawa');
+            project.shimazaki=document.getElementById('shimazaki');
+            project.sasaki=document.getElementById('sasaki');
+            project.hashimoto=document.getElementById('hashimoto');
 
-        project.anndou.innerHTML=datacreate();
-        project.okita.innerHTML=datacreate();
-        project.simada.innerHTML=datacreate();
-        project.miyazaki.innerHTML=datacreate();
-        project.kennmoti.innerHTML=datacreate();
-        project.hayate.innerHTML=datacreate();
-        
+            project.anndou=document.getElementById('anndou');
+            project.okita=document.getElementById('okita');
+            project.simada=document.getElementById('simada');
+            project.miyazaki=document.getElementById('miyazaki');
+            project.kennmoti=document.getElementById('kennmoti');
+            project.hayate=document.getElementById('hayate');
+            
+            project.abe.innerHTML=datacreate();
+            project.aoki.innerHTML='<a href="/data-kagaku/haru/index.html"><p>キャット戦<br><img src="/data-kagaku/haru/IMG_0145.jpeg"></p></a>';
+            project.nomura.innerHTML=datacreate();
+            project.satou.innerHTML=datacreate();
+            project.idokawa.innerHTML=datacreate();
+            project.shimazaki.innerHTML=datacreate();
+            project.sasaki.innerHTML=datacreate();
+
+            project.anndou.innerHTML='';
+            project.okita.innerHTML=datacreate();
+            project.simada.innerHTML=datacreate();
+            project.miyazaki.innerHTML=datacreate();
+            project.kennmoti.innerHTML=datacreate();
+            project.hayate.innerHTML=datacreate();
+        }
     </script>
 </body>
 </html>

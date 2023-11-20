@@ -41,7 +41,7 @@
 
     <script>
         function datacreate(projectid,projectname){
-            let data=`<a href="https://scratch.mit.edu/projects/${projectid}"><p>${projectname}<br><img src="https://uploads.scratch.mit.edu/get_image/project/${projectid}_288x216.png"></p></a>`;
+            let data=`<p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }
         var project={};
@@ -69,7 +69,7 @@
             project.hayate=document.getElementById('hayate');
             
             project.abe.innerHTML=datacreate();
-            project.aoki.innerHTML='<a href="/data-kagaku/haru/index.html"><p>キャット戦<br><img src="/data-kagaku/haru/IMG_0145.jpeg"></p></a>';
+            project.aoki.innerHTML='<iframe src="https://tamago55123.github.io/data-kagaku/haru/index.html" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>';
             project.nomura.innerHTML=datacreate();
             project.satou.innerHTML=datacreate();
             project.idokawa.innerHTML=datacreate();

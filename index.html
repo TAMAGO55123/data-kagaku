@@ -42,18 +42,9 @@
 
     <script>
         
-        function datacreate(projectid){
+        function datacreate(projectid,projectname){
             
-            var projectname='';
-            $.ajax({
-                url:`https://api.scratch.mit.edu/projects/${projectid}`,
-                type:'GET',
-                success:function(data){
-                    let json=JSON.parse(data);
-                    projectname=json.title;
-                }
-            })
-
+            
             let data=`<p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }

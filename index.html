@@ -10,6 +10,7 @@
             font-family: 'Noto Sans JP', sans-serif;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <h1>科学技術部作品発表</h1>
@@ -40,7 +41,19 @@
     <div id="hayate"></div>
 
     <script>
-        function datacreate(projectid,projectname){
+        
+        function datacreate(projectid){
+            
+            var projectname='';
+            $.ajax({
+                url:`https://api.scratch.mit.edu/projects/${projectid}`,
+                type:'GET',
+                success:function(data){
+                    let json=JSON.parse(data);
+                    projectname=json.title;
+                }
+            })
+
             let data=`<p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }
@@ -69,7 +82,7 @@
             project.hayate=document.getElementById('hayate');
             
             project.abe.innerHTML=datacreate();
-            project.aoki.innerHTML='<iframe src="https://tamago55123.github.io/data-kagaku/haru/index.html" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>';
+            project.aoki.innerHTML=datacreate('927879682');
             project.nomura.innerHTML=datacreate();
             project.satou.innerHTML=datacreate();
             project.idokawa.innerHTML=datacreate();
@@ -82,6 +95,9 @@
             project.miyazaki.innerHTML=datacreate();
             project.kennmoti.innerHTML=datacreate();
             project.hayate.innerHTML=datacreate();
+        }
+        else{
+            document.body.innerHTML=document.body.innerHTML+'<p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
     </script>
 </body>

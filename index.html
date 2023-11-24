@@ -48,6 +48,10 @@
             let data=`<p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }
+        function stopif(){
+            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+        }
+
         var project={};
 
         //var date=new Date();
@@ -88,8 +92,9 @@
             project.hayate.innerHTML=datacreate();
         }
         else{
-            document.body.innerHTML=document.body.innerHTML+'<p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
+        window.addEventListener('click',stopif);
     </script>
 </body>
 </html>

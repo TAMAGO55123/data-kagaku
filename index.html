@@ -52,29 +52,29 @@
             if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
 
-        var project={};
+        
 
         //var date=new Date();
         //var jikan=date.getMinutes();
         
         if(document.cookie.indexOf('data')==0){
-            project.abe=document.getElementById('abe');
-            project.aoki=document.getElementById('aoki');
-            project.kobayasi=document.getElementById('kobayasi');
-            project.iida=document.getElementById('iida');
-            project.nomura=document.getElementById('nomura');
-            project.satou=document.getElementById('satou');
-            project.idokawa=document.getElementById('idokawa');
-            project.shimazaki=document.getElementById('shimazaki');
-            project.sasaki=document.getElementById('sasaki');
-            project.hashimoto=document.getElementById('hashimoto');
+            var project={
+                abe:document.getElementById('abe'),
+                aoki:document.getElementById('aoki'),
+                kobayasi:document.getElementById('kobayasi'),
+                nomura:document.getElementById('nomura'),
+                satou:document.getElementById('satou'),
+                idokawa:document.getElementById('idokawa'),
+                shimazaki:document.getElementById('shimazaki'),
+                sasaki:document.getElementById('sasaki'),
 
-            project.anndou=document.getElementById('anndou');
-            project.okita=document.getElementById('okita');
-            project.simada=document.getElementById('simada');
-            project.miyazaki=document.getElementById('miyazaki');
-            project.kennmoti=document.getElementById('kennmoti');
-            project.hayate=document.getElementById('hayate');
+                anndou:document.getElementById('anndou'),
+                okita:document.getElementById('okita'),
+                simada:document.getElementById('simada'),
+                miyazaki:document.getElementById('miyazaki'),
+                kennmoti:document.getElementById('kennmoti'),
+                hayate:document.getElementById('hayate')
+            };
             
             project.abe.innerHTML=datacreate('928515595','キャット進化歴');
             project.aoki.innerHTML=datacreate('927879682','キャット戦');

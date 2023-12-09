@@ -34,23 +34,27 @@
         
         if(document.cookie.indexOf('data')==0){
             var project={
-                abe:document.getElementById('abe'),
-                aoki:document.getElementById('aoki'),
-                kobayasi:document.getElementById('kobayasi'),
-                nomura:document.getElementById('nomura'),
-                satou:document.getElementById('satou'),
-                idokawa:document.getElementById('idokawa'),
-                shimazaki:document.getElementById('shimazaki'),
-                sasaki:document.getElementById('sasaki'),
+                abe:document.createElement('div'),
+                aoki:document.createElement('div'),
+                kobayasi:document.createElement('div'),
+                nomura:document.createElement('div'),
+                satou:document.createElement('div'),
+                idokawa:document.createElement('div'),
+                shimazaki:document.createElement('div'),
+                sasaki:document.createElement('div'),
 
-                anndou:document.getElementById('anndou'),
-                okita:document.getElementById('okita'),
-                simada:document.getElementById('simada'),
-                miyazaki:document.getElementById('miyazaki'),
-                kennmoti:document.getElementById('kennmoti'),
-                hayate:document.getElementById('hayate')
+                anndou:document.createElement('div'),
+                okita:document.createElement('div'),
+                simada:document.createElement('div'),
+                miyazaki:document.createElement('div'),
+                kennmoti:document.createElement('div'),
+                hayate:document.createElement('div')
             };
-            
+            let one=document.createElement('h2');
+            let two=document.createElement('h2');
+            one.innerText='1年生';
+            two.innerText='2年生';
+
             project.abe.innerHTML=datacreate('928515595','キャット進化歴');
             project.aoki.innerHTML=datacreate('927879682','キャット戦');
             project.nomura.innerHTML=datacreate();
@@ -65,6 +69,24 @@
             project.miyazaki.innerHTML=datacreate('937535730','スーパーマリオRPG');
             project.kennmoti.innerHTML=datacreate();
             project.hayate.innerHTML=datacreate();
+
+            document.body.appendChild(one);
+            document.body.appendChild(project.abe);
+            document.body.appendChild(project.aoki);
+            document.body.appendChild(project.kobayasi);
+            document.body.appendChild(project.nomura);
+            document.body.appendChild(project.satou);
+            document.body.appendChild(project.idokawa);
+            document.body.appendChild(project.shimazaki);
+            document.body.appendChild(project.sasaki);
+
+            document.body.appendChild(two);
+            document.body.appendChild(project.anndou);
+            document.body.appendChild(project.okita);
+            document.body.appendChild(project.simada);
+            document.body.appendChild(project.miyazaki);
+            document.body.appendChild(project.kennmoti);
+            document.body.appendChild(project.hayate);
         }
         else{
             document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';

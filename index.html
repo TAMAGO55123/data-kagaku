@@ -124,7 +124,7 @@
             
             let style=document.querySelector('style#font')
             select.addEventListener('change',function (){
-                style.innerHTML=select.value;
+                style.innerHTML=`*{${select.value}}`;
             });
 
         }

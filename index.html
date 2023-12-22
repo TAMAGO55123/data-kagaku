@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>科学技術部作品発表</h1>
-    <style id="font"></style>
+    <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         
         function datacreate(projectid,projectname){
@@ -52,7 +52,8 @@
                 tanabe:document.createElement('div'),
                 satou_a:document.createElement('div'),
                 iizumi:document.createElement('div'),
-                sino:document.createElement('div')
+                sino:document.createElement('div'),
+                somiya:document.createElement('div')
             };
             let one=document.createElement('h2');
             let two=document.createElement('h2');
@@ -75,9 +76,10 @@
             project.sino.innerHTML=datacreate();
             project.miyazaki.innerHTML=datacreate('937535730','スーパーマリオRPG');
             project.kennmoti.innerHTML=datacreate();
-            project.hayate.innerHTML=datacreate('928511078','スーパーアスレチック');
+            project.hayate.innerHTML=datacreate('748398641','Universe Shooting');
             project.tanabe.innerHTML=datacreate('937560334','勾玉の闘争');
             project.iizumi.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/迷路（easy⭐︎）.html','迷路（easy⭐︎）');
+            project.somiya.innerHTML=datacreate('937550844','ネコ大戦争');
 
 
             document.body.appendChild(one);
@@ -100,6 +102,7 @@
             document.body.appendChild(project.tanabe);
             document.body.appendChild(project.satou_a);
             document.body.appendChild(project.iizumi);
+            document.body.appendChild(project.somiya);
 
             document.body.appendChild(selectcreate);
             let select=document.querySelector('select#fonts');

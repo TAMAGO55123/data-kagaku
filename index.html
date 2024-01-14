@@ -10,14 +10,13 @@
 </head>
 <body>
     <h1>科学技術部作品発表</h1>
-    <button onclick="window.location.reload"></button>
     <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         
         function datacreate(projectid,projectname){
             
             
-            let data=`<p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed?pause&clones" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
+            let data=`<p>画像が反映されない時は、ボタンをクリックしてください。</p><br><button class="reload">再読み込み</button><br><p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed?pause&clones" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }
         function dataiframe(projectlink,projectname){
@@ -130,6 +129,10 @@
             select.addEventListener('change',function (){
                 style.innerHTML=`*{${select.value}}`;
                 console.log(style.innerHTML);
+            });
+
+            document.getElementsByClassName('reload').forEach(element => {
+                element.onclick='document.location.reload';
             });
 
         }

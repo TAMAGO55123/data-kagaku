@@ -133,7 +133,7 @@
 
             let reload=document.querySelectorAll('.reload');
             reload.forEach(function(item){
-                item.onclick=document.location.reload;
+                item.onclick=function(){document.location.reload()};
             });
 
         }

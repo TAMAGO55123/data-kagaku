@@ -22,7 +22,7 @@
         function dataiframe(projectlink){
             let projectname=projectlink.replace('.html','');
             projectname=projectname.replace('https://tamago55123.github.io/data-kagaku/','')
-            let data=`<p>${projectname}<br><iframe src="${projectlink}" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
+            let data=`<p>画像が反映されない時は、ボタンをクリックしてください。</p><button class="reload">再読み込み</button><br><p>${projectname}<br><iframe src="${projectlink}" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
             return data;
         }
         function stopif(){

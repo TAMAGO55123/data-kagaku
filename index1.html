@@ -35,7 +35,7 @@
         //var jikan=date.getMinutes();
         
         if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
-            /*var project={
+            var project={
                 abe:document.createElement('div'),
                 aoki:document.createElement('div'),
                 kobayasi:document.createElement('div'),
@@ -44,57 +44,27 @@
                 idokawa:document.createElement('div'),
                 shimazaki:document.createElement('div'),
                 sasaki:document.createElement('div'),
-
-                anndou:document.createElement('div'),
-                okita:document.createElement('div'),
-                simada:document.createElement('div'),
-                miyazaki:document.createElement('div'),
-                kennmoti:document.createElement('div'),
-                hayate:document.createElement('div'),
-                tanabe:document.createElement('div'),
-                iizumi:document.createElement('div'),
-                somiya:document.createElement('div'),
-                masuda:document.createElement('div'),
-                sino:document.createElement('div'),
             };
             let one=document.createElement('h2');
-            let two=document.createElement('h2');
-            */
+            let back1=document.createElement('button');
+            let back2=document.createElement('button');
+            
             let selectcreate=document.createElement('select');
-            /*
             one.innerText='1年生';
-            two.innerText='2年生';
-            */
             selectcreate.id='fonts';
+            back1.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html';
+            back2.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html';
 
-
-            let one=document.createElement('button');
-            one.onclick='https://tamago55123.github.io/data-kagaku/index1.html';
-            let two=document.createElement('button');
-            two.onclick='https://tamago55123.github.io/data-kagaku/index2.html';
-            /*
 
             project.abe.innerHTML=datacreate('928515595','キャット進化歴');
             project.aoki.innerHTML=datacreate('927879682','キャット戦');
             project.nomura.innerHTML=datacreate('873636888','carドライビングレーシング1');
-            project.satou.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/超楽しいおにぎりガチャ!!.html',);
+            project.satou.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/超楽しいおにぎりガチャ!!.html',);
             project.idokawa.innerHTML=datacreate('908017386','トラックシュミレーター1');
             project.shimazaki.innerHTML=datacreate('871332809','プロセカガチャ');
-            project.sasaki.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/アンダーテール風避けゲー.html');
-
-            project.anndou.innerHTML=datacreate('938834296','シューティング');
-            project.okita.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/コードレス掃除機から逃げろ.html');
-            project.simada.innerHTML=datacreate('921653071','Raise Chicken');
-            project.miyazaki.innerHTML=datacreate('937535730','スーパーマリオRPG');
-            project.kennmoti.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/ネコ大戦争.html');
-            project.hayate.innerHTML=datacreate('748398641','Universe Shooting');
-            project.tanabe.innerHTML=datacreate('937560334','勾玉の闘争');
-            project.iizumi.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/迷路（easy⭐︎）.html');
-            project.somiya.innerHTML=datacreate('937550844','ネコ大戦争');
-            project.masuda.innerHTML=datacreate('940975304','Shooting');
-
-
-
+            project.sasaki.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/アンダーテール風避けゲー.html');
+            
+            document.body.appendChild(back1);
             document.body.appendChild(one);
             document.body.appendChild(project.abe);
             document.body.appendChild(project.aoki);
@@ -104,18 +74,6 @@
             document.body.appendChild(project.idokawa);
             document.body.appendChild(project.shimazaki);
             document.body.appendChild(project.sasaki);
-
-            document.body.appendChild(two);
-            document.body.appendChild(project.anndou);
-            document.body.appendChild(project.okita);
-            document.body.appendChild(project.simada);
-            document.body.appendChild(project.miyazaki);
-            document.body.appendChild(project.kennmoti);
-            document.body.appendChild(project.hayate);
-            document.body.appendChild(project.tanabe);
-            document.body.appendChild(project.iizumi);
-            document.body.appendChild(project.somiya);
-            document.body.appendChild(project.masuda);*/
 
             document.body.appendChild(selectcreate);
             let select=document.querySelector('select#fonts');
@@ -137,6 +95,8 @@
             select.appendChild(option[1]);
             select.appendChild(option[2]);
             select.appendChild(option[3]);
+
+            document.body.appendChild(back2);
             
             let style=document.querySelector('style#font')
             select.addEventListener('change',function (){
@@ -148,7 +108,6 @@
             reload.forEach(function(item){
                 item.onclick=function(){document.location.reload()};
             });
-
 
         }
         else{

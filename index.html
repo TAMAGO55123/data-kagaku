@@ -12,61 +12,13 @@
     <h1>科学技術部作品発表</h1>
     <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
-        
-        function datacreate(projectid,projectname){
-            
-            
-            let data=`<p>画像が反映されない時は、ボタンをクリックしてください。</p><button class="reload">再読み込み</button><br><p>${projectname}<br><iframe src="https://turbowarp.org/${projectid}/embed?pause&clones=10000" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
-            return data;
-        }
-        function dataiframe(projectlink){
-            let projectname=projectlink.replace('.html','');
-            projectname=projectname.replace('https://tamago55123.github.io/data-kagaku/','')
-            let data=`<p>画像が反映されない時は、ボタンをクリックしてください。</p><button class="reload">再読み込み</button><br><p>${projectname}<br><iframe src="${projectlink}" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe></p>`;
-            return data;
-        }
         function stopif(){
             if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
-
-        
-
-        //var date=new Date();
-        //var jikan=date.getMinutes();
         
         if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
-            /*var project={
-                abe:document.createElement('div'),
-                aoki:document.createElement('div'),
-                kobayasi:document.createElement('div'),
-                nomura:document.createElement('div'),
-                satou:document.createElement('div'),
-                idokawa:document.createElement('div'),
-                shimazaki:document.createElement('div'),
-                sasaki:document.createElement('div'),
-
-                anndou:document.createElement('div'),
-                okita:document.createElement('div'),
-                simada:document.createElement('div'),
-                miyazaki:document.createElement('div'),
-                kennmoti:document.createElement('div'),
-                hayate:document.createElement('div'),
-                tanabe:document.createElement('div'),
-                iizumi:document.createElement('div'),
-                somiya:document.createElement('div'),
-                masuda:document.createElement('div'),
-                sino:document.createElement('div'),
-            };
-            let one=document.createElement('h2');
-            let two=document.createElement('h2');
-            */
             let selectcreate=document.createElement('select');
-            /*
-            one.innerText='1年生';
-            two.innerText='2年生';
-            */
             selectcreate.id='fonts';
-
 
             let one=document.createElement('button');
             one.onclick='https://tamago55123.github.io/data-kagaku/index1.html';
@@ -74,51 +26,7 @@
             two.onclick='https://tamago55123.github.io/data-kagaku/index2.html';
             document.appendChild(one);
             document.appendChild(two);
-            /*
-
-            project.abe.innerHTML=datacreate('928515595','キャット進化歴');
-            project.aoki.innerHTML=datacreate('927879682','キャット戦');
-            project.nomura.innerHTML=datacreate('873636888','carドライビングレーシング1');
-            project.satou.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/超楽しいおにぎりガチャ!!.html',);
-            project.idokawa.innerHTML=datacreate('908017386','トラックシュミレーター1');
-            project.shimazaki.innerHTML=datacreate('871332809','プロセカガチャ');
-            project.sasaki.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/アンダーテール風避けゲー.html');
-
-            project.anndou.innerHTML=datacreate('938834296','シューティング');
-            project.okita.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/コードレス掃除機から逃げろ.html');
-            project.simada.innerHTML=datacreate('921653071','Raise Chicken');
-            project.miyazaki.innerHTML=datacreate('937535730','スーパーマリオRPG');
-            project.kennmoti.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/ネコ大戦争.html');
-            project.hayate.innerHTML=datacreate('748398641','Universe Shooting');
-            project.tanabe.innerHTML=datacreate('937560334','勾玉の闘争');
-            project.iizumi.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/迷路（easy⭐︎）.html');
-            project.somiya.innerHTML=datacreate('937550844','ネコ大戦争');
-            project.masuda.innerHTML=datacreate('940975304','Shooting');
-
-
-
-            document.body.appendChild(one);
-            document.body.appendChild(project.abe);
-            document.body.appendChild(project.aoki);
-            document.body.appendChild(project.kobayasi);
-            document.body.appendChild(project.nomura);
-            document.body.appendChild(project.satou);
-            document.body.appendChild(project.idokawa);
-            document.body.appendChild(project.shimazaki);
-            document.body.appendChild(project.sasaki);
-
-            document.body.appendChild(two);
-            document.body.appendChild(project.anndou);
-            document.body.appendChild(project.okita);
-            document.body.appendChild(project.simada);
-            document.body.appendChild(project.miyazaki);
-            document.body.appendChild(project.kennmoti);
-            document.body.appendChild(project.hayate);
-            document.body.appendChild(project.tanabe);
-            document.body.appendChild(project.iizumi);
-            document.body.appendChild(project.somiya);
-            document.body.appendChild(project.masuda);*/
-
+            
             document.body.appendChild(selectcreate);
             let select=document.querySelector('select#fonts');
             let option=[
@@ -145,12 +53,6 @@
                 style.innerHTML=`*{${select.value}}`;
                 console.log(style.innerHTML);
             });
-
-            let reload=document.querySelectorAll('.reload');
-            reload.forEach(function(item){
-                item.onclick=function(){document.location.reload()};
-            });
-
 
         }
         else{

@@ -9,8 +9,8 @@
     </style>
 </head>
 <body>
-    <h1>科学技術部作品発表</h1>
-    <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
+    <h1 class="fon">科学技術部作品発表</h1>
+    <style id="font">.fon{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         function stopif(){
             if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
@@ -19,20 +19,21 @@
         if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
             let selectcreate=document.createElement('select');
             selectcreate.id='fonts';
+            selectcreate.className='fon';
             
             let gakunendiv=document.createElement('div');
             gakunendiv.className='gakunen';
             gakunendiv.id='gakunendiv'
             let one=document.createElement('a');
             one.href='https://tamago55123.github.io/data-kagaku/index1.html';
-            one.style="color:#FFFF00;border-color:%230000FF;";
+            one.style="color:orange;border-color:orange;";
             one.className='gakunenbor';
             one.innerHTML='1年生';
             let two=document.createElement('a');
             two.href='https://tamago55123.github.io/data-kagaku/index2.html';
             two.style="color:#0000FF;border-color:#0000FF;";
             two.innerHTML='2年生';
-            one.className='gakunenbor';
+            two.className='gakunenbor';
             document.body.appendChild(gakunendiv);
             let gakunendiv2=document.getElementById('gakunendiv');
             gakunendiv2.appendChild(one);
@@ -61,7 +62,7 @@
             
             let style=document.querySelector('style#font')
             select.addEventListener('change',function (){
-                style.innerHTML=`*{${select.value}}`;
+                style.innerHTML=`.fon{${select.value}}`;
                 console.log(style.innerHTML);
             });
 
@@ -74,8 +75,6 @@
     <style>
         .gakunen{
             font-family: 'Rampart One', sans-serif;
-            display: flex;
-            justify-content: center;
         }
         .gakunenbor{
             border: 5px;

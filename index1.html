@@ -52,10 +52,11 @@
             let selectcreate=document.createElement('select');
             one.innerText='1年生';
             selectcreate.id='fonts';
-            back1.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html';
-            back2.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html';
+            back1.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html";';
+            back2.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html";';
             back1.innerHTML='戻る';
             back2.innerHTML='戻る';
+            
 
             project.abe.innerHTML=datacreate('928515595','キャット進化歴');
             project.aoki.innerHTML=datacreate('927879682','キャット戦');
@@ -96,7 +97,8 @@
             select.appendChild(option[1]);
             select.appendChild(option[2]);
             select.appendChild(option[3]);
-
+            
+            document.body.appendChild(document.createElement('br'));
             document.body.appendChild(back2);
             
             let style=document.querySelector('style#font')

@@ -9,7 +9,7 @@
     </style>
 </head>
 <body>
-    <h1 class="fon">科学技術部作品発表</h1>
+    <p class="fon">科学技術部作品発表</p>
     <style id="font">.fon{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         function stopif(){
@@ -68,12 +68,12 @@
 
         }
         else{
-            document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            document.body.innerHTML='<p>科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
         window.addEventListener('click',stopif);
     </script>
     <style>
-        h1{
+        p{
             font-size: 55px;
         }
         .gakunen{

@@ -52,8 +52,8 @@
             let selectcreate=document.createElement('select');
             one.innerText='1年生';
             selectcreate.id='fonts';
-            back1.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html";';
-            back2.onclick='location.href="https://tamago55123.github.io/data-kagaku/index.html";';
+            back1.onclick='history.back()';
+            back2.onclick='history.back()';
             back1.innerHTML='戻る';
             back2.innerHTML='戻る';
             
@@ -65,6 +65,7 @@
             project.idokawa.innerHTML=datacreate('908017386','トラックシュミレーター1');
             project.shimazaki.innerHTML=datacreate('871332809','プロセカガチャ');
             project.sasaki.innerHTML=datacreate('927313652','アンダーテール風避けゲー');
+            project.kobayasi.innerHTML=datacreate('');
             
             document.body.appendChild(back1);
             document.body.appendChild(one);

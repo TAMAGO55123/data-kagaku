@@ -46,14 +46,14 @@
                 sasaki:document.createElement('div'),
             };
             let one=document.createElement('h2');
-            let back1=document.createElement('button');
-            let back2=document.createElement('button');
+            let back1=document.createElement('a');
+            let back2=document.createElement('a');
             
             let selectcreate=document.createElement('select');
             one.innerText='1年生';
             selectcreate.id='fonts';
-            back1.onclick='history.back()';
-            back2.onclick='history.back()';
+            back1.href='javascript:history.back()';
+            back2.href='javascript:history.back()';
             back1.innerHTML='戻る';
             back2.innerHTML='戻る';
             

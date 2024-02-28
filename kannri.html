@@ -10,9 +10,11 @@
     <button id="admincookie">常時cookie</button>
     <button id="admindelete">常時cookie削除</button>
     <script>
+        let data1=new Date('2024-04-30T23:59:59');
+        let data2=data1.toUTCString();
         let admincookie=document.querySelector('button#admincookie');
         admincookie.addEventListener('click',function(){
-            document.cookie='kannri=1';
+            document.cookie='kannri=1;expires='+data2;
         });
         let admindelete=document.querySelector('button#admindelete');
         admindelete.addEventListener('click',function(){

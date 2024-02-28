@@ -9,11 +9,11 @@
     </style>
 </head>
 <body>
-    <p class="fon">科学技術部作品発表</p>
+    <p class="fon" style="font-size: 55px;">科学技術部作品発表</p>
     <style id="font">.fon{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         function stopif(){
-            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
         
         if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
@@ -68,14 +68,11 @@
 
         }
         else{
-            document.body.innerHTML='<p>科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
         window.addEventListener('click',stopif);
     </script>
     <style>
-        p{
-            font-size: 55px;
-        }
         .gakunen{
             font-family: 'Rampart One', sans-serif;
             display: flex;

@@ -9,7 +9,7 @@
     </style>
 </head>
 <body>
-    <p>科学技術部作品発表</p>
+    <p style="font-size: 55px;">科学技術部作品発表</p>
     <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
         
@@ -26,7 +26,7 @@
             return data;
         }
         function stopif(){
-            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<h1>科学技術部作品発表ページ</h1><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
 
         
@@ -120,7 +120,7 @@
 
         }
         else{
-            document.body.innerHTML='<p>科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+            document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
         }
         window.addEventListener('click',stopif);
     </script>

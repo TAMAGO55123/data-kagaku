@@ -7,7 +7,9 @@
 </head>
 <body>
     <script>
-        document.cookie='data=1; max-age=600';
+        if(document.cookie.indexOf('data')=-1){
+            document.cookie='data=1; max-age=600';
+        }
         document.location.href='https://tamago55123.github.io/data-kagaku/index.html';
     </script>
 </body>

@@ -5,60 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>科学技術部作品発表 プロジェクトページ</title>
     <link rel="stylesheet" href="font.css">
+    
 </head>
 <body>
-    
-    <p style="font-size: 55px;">科学技術部作品発表</p>
-    <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
-    <script src="function.js"></script>
+    <p class="fon" style="font-size: 55px;">科学技術部作品発表</p>
+    <style id="font">.fon{font-family: 'Noto Sans JP', sans-serif;}</style>
     <script>
-        //var date=new Date();
-        //var jikan=date.getMinutes();
+        function stopif(){
+            if(document.cookie.indexOf('data')==-1)document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+        }
         
-        if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
-            var project={
-                abe:document.createElement('div'),
-                aoki:document.createElement('div'),
-                kobayasi:document.createElement('div'),
-                nomura:document.createElement('div'),
-                satou:document.createElement('div'),
-                idokawa:document.createElement('div'),
-                shimazaki:document.createElement('div'),
-                sasaki:document.createElement('div'),
-            };
-            let one=document.createElement('h2');
-            let back1=document.createElement('a');
-            let back2=document.createElement('a');
-            
-            let selectcreate=document.createElement('select');
-            one.innerText='1年生';
-            selectcreate.id='fonts';
-            back1.href='javascript:history.back()';
-            back2.href='javascript:history.back()';
-            back1.innerHTML='戻る';
-            back2.innerHTML='戻る';
-            
-
-            project.abe.innerHTML=datacreate('928515595','キャット進化歴');
-            project.aoki.innerHTML=datacreate('967066298','キャット戦重力バージョン');
-            project.nomura.innerHTML=datacreate('873636888','carドライビングレーシング1');
-            project.satou.innerHTML=datacreate('886142060','超楽しいおにぎりガチャ');
-            project.idokawa.innerHTML=datacreate('908017386','FARM トラックシュミレーター1');
-            project.shimazaki.innerHTML=datacreate('871332809','プロセカガチャ');
-            project.sasaki.innerHTML=datacreate('927313652','アンダーテール風避けゲー');
-            project.kobayasi.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/レース場.html');
-            
-            document.body.appendChild(back1);
-            document.body.appendChild(one);
-            document.body.appendChild(project.abe);
-            document.body.appendChild(project.aoki);
-            document.body.appendChild(project.kobayasi);
-            document.body.appendChild(project.nomura);
-            document.body.appendChild(project.satou);
-            document.body.appendChild(project.idokawa);
-            document.body.appendChild(project.shimazaki);
-            document.body.appendChild(project.sasaki);
-
+        if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){            
             document.body.appendChild(selectcreate);
             let select=document.querySelector('select#fonts');
             let option=[
@@ -80,18 +37,10 @@
             select.appendChild(option[2]);
             select.appendChild(option[3]);
             
-            document.body.appendChild(document.createElement('br'));
-            document.body.appendChild(back2);
-            
             let style=document.querySelector('style#font')
             select.addEventListener('change',function (){
-                style.innerHTML=`*{${select.value}}`;
+                style.innerHTML=`.fon{${select.value}}`;
                 console.log(style.innerHTML);
-            });
-
-            let reload=document.querySelectorAll('.reload');
-            reload.forEach(function(item){
-                item.onclick=function(){document.location.reload()};
             });
 
         }
@@ -100,5 +49,21 @@
         }
         window.addEventListener('click',stopif);
     </script>
+    <style>
+        .gakunen{
+            font-family: 'Rampart One', sans-serif;
+            display: flex;
+            width: 100%;
+            height: 83px;
+        }
+        .gakunenbor{
+            border: 5px black solid;
+            font-size: 40px;
+            text-align: center;
+            display: block;
+            width: 50%;
+            height: 65px;
+        }
+    </style>
 </body>
 </html>

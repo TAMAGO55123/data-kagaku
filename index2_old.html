@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科学技術部作品発表 プロジェクトページ</title>
+    <link rel="stylesheet" href="font.css">
+</head>
+<body>
+    <p style="font-size: 55px;">科学技術部作品発表</p>
+    <style id="font">*{font-family: 'Noto Sans JP', sans-serif;}</style>
+    <script src="function.js"></script>
+    <script>
+        //var date=new Date();
+        //var jikan=date.getMinutes();
+        
+        if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
+            var project={
+                anndou:document.createElement('div'),
+                okita:document.createElement('div'),
+                simada:document.createElement('div'),
+                miyazaki:document.createElement('div'),
+                kennmoti:document.createElement('div'),
+                hayate:document.createElement('div'),
+                tanabe:document.createElement('div'),
+                iizumi:document.createElement('div'),
+                somiya:document.createElement('div'),
+                masuda:document.createElement('div'),
+                sino:document.createElement('div'),
+            };
+            let two=document.createElement('h2');
+            let selectcreate=document.createElement('select');
+            two.innerText='2年生';
+            selectcreate.id='fonts';
+            let back1=document.createElement('a');
+            let back2=document.createElement('a');
+            back1.href='javascript:history.back()';
+            back2.href='javascript:history.back()';
+            back1.innerHTML='戻る';
+            back2.innerHTML='戻る';
+
+            project.anndou.innerHTML=datacreate('938834296','シューティング');
+            project.okita.innerHTML=datacreate('930166217','コードレス掃除機から逃げろ');
+            project.simada.innerHTML=datacreate('921653071','Raise Chicken');
+            project.miyazaki.innerHTML=datacreate('937535730','スーパーマリオRPG');
+            project.kennmoti.innerHTML=datacreate('953649273','果物よけ');
+            project.hayate.innerHTML=datacreate('748398641','Universe Shooting');
+            project.tanabe.innerHTML=datacreate('937560334','勾玉の闘争');
+            project.iizumi.innerHTML=dataiframe('https://tamago55123.github.io/data-kagaku/迷路（easy⭐︎）.html');
+            project.somiya.innerHTML=datacreate('937550844','ネコ大戦争');
+            project.masuda.innerHTML=datacreate('940975204','Shooting');
+            project.sino.innerHTML=datacreate('971502316','PNVgなりきりゲーム')
+
+            document.body.appendChild(back1);
+            document.body.appendChild(two);
+            document.body.appendChild(project.anndou);
+            document.body.appendChild(project.okita);
+            document.body.appendChild(project.simada);
+            document.body.appendChild(project.miyazaki);
+            document.body.appendChild(project.kennmoti);
+            document.body.appendChild(project.hayate);
+            document.body.appendChild(project.tanabe);
+            document.body.appendChild(project.iizumi);
+            document.body.appendChild(project.somiya);
+            document.body.appendChild(project.masuda);
+            document.body.appendChild(project.sino)
+
+            document.body.appendChild(selectcreate);
+            let select=document.querySelector('select#fonts');
+            let option=[
+                document.createElement('option'),
+                document.createElement('option'),
+                document.createElement('option'),
+                document.createElement('option')
+            ];
+            option[0].innerText='Noto Sans';
+            option[0].value="font-family: 'Noto Sans JP', sans-serif;";
+            option[1].innerText='DotGothic16';
+            option[1].value="font-family: 'DotGothic16', sans-serif;";
+            option[2].innerText='Ramport One';
+            option[2].value="font-family: 'Rampart One', sans-serif;";
+            option[3].innerText='M Plus Rounded 1c';
+            option[3].value="font-family: 'M PLUS Rounded 1c', sans-serif;";
+            select.appendChild(option[0]);
+            select.appendChild(option[1]);
+            select.appendChild(option[2]);
+            select.appendChild(option[3]);
+
+            document.body.appendChild(document.createElement('br'));
+            document.body.appendChild(back2);
+            
+            let style=document.querySelector('style#font')
+            select.addEventListener('change',function (){
+                style.innerHTML=`*{${select.value}}`;
+                console.log(style.innerHTML);
+            });
+
+            let reload=document.querySelectorAll('.reload');
+            reload.forEach(function(item){
+                item.onclick=function(){document.location.reload()};
+            });
+
+        }
+        else{
+            document.body.innerHTML='<p style="font-size: 55px;">科学技術部作品発表ページ</p><br><p>時間切れまたはタイムアウトしました。<br>QRコードを読み直してください。</p>';
+        }
+        window.addEventListener('click',stopif);
+    </script>
+</body>
+</html>

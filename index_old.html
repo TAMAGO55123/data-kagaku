@@ -15,6 +15,28 @@
         }
         
         if(document.cookie.indexOf('data')==0||document.cookie.indexOf('kannri')==0){
+            let selectcreate=document.createElement('select');
+            selectcreate.id='fonts';
+            selectcreate.className='fon';
+            
+            let gakunendiv=document.createElement('div');
+            gakunendiv.className='gakunen';
+            gakunendiv.id='gakunendiv'
+            let one=document.createElement('a');
+            one.href='https://tamago55123.github.io/data-kagaku/index1.html';
+            one.style="color:orange;";
+            one.className='gakunenbor';
+            one.innerHTML='1年生';
+            let two=document.createElement('a');
+            two.href='https://tamago55123.github.io/data-kagaku/index2.html';
+            two.style="color:#0000FF;";
+            two.innerHTML='2年生';
+            two.className='gakunenbor';
+            document.body.appendChild(gakunendiv);
+            let gakunendiv2=document.getElementById('gakunendiv');
+            gakunendiv2.appendChild(one);
+            gakunendiv2.appendChild(two);
+            
             document.body.appendChild(selectcreate);
             let select=document.querySelector('select#fonts');
             let option=[
